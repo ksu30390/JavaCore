@@ -24,15 +24,15 @@ public class CalgaryForecast {
                 .addQueryParameter("apikey", "70Hl5xKPmRRZSnBX7JFGfm16nHbQhgAL")
                 .build();
 
-        // Экземпляр класса Request создается через Builder (см. паттерн проектирования "Строитель")
+       
         Request request = new Request.Builder()
                 .url(url)
                 .build();
 
-        // Получение объекта ответа от сервера
+       
         Response response = client.newCall(request).execute();
 
-        // Тело сообщения возвращается методом body объекта Response
+        
         String body = response.body().string();
 
         System.out.println(response.code());
